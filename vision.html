@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artistic Vision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Haettenschweiler&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #0f0f0f;
+      color: #f8f3ec;
+      
+    }
+
+    .heading {
+      text-align: right;
+      left: 100px;
+      font-size: 4em;
+      margin-top: 30px;
+      margin-right: 210px;
+      animation:3s ease-in-out infinite alternate;
+      font-family: 'Haettenschweiler', sans-serif;
+      color: #f4d5a8;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+      }
+      to {
+        text-shadow: 0 0 20px #ff6600, 0 0 30px #ff6600;
+      }
+    }
+.image-wrapper {
+      width: 40%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin-right: 50px;
+       transform: translateX(-100%);
+  animation: slideIn 3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85vh;
+      padding: 0 5%;
+    }
+
+
+
+    .vision-text {
+      width: 50%;
+      font-size: 1.3em;
+      line-height: 1.4;
+      padding-left: 40px;
+      white-space: pre-line;
+      word-spacing: 20px;
+      letter-spacing: 5px;
+      line-height: 1.4;
+      font-weight: 70;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      text-decoration-color: #fbfaf8;
+      text-align: justify;
+
+    }
+
+    .vision-text span {
+      opacity: 0;
+      filter: blur(5px);
+      animation: reveal 0.2s forwards;
+      animation-delay: var(--delay);
+      display: inline-block;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+       text-decoration-color: #fbfaf8;
+    }
+    .script {
+      word-spacing: 20px;
+      letter-spacing: 5px;
+      line-height: 1.8;
+      font-weight: 100;
+    }
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">ARTISTIC VISION</div>
+  <div class="container">
+    <div class="image-wrapper" style="background-image: url('shilpaE.jpg');"></div>
+    <div class="vision-text" id="animatedText"></div>
+  </div>
+
+  <script>
+    const text = `With utmost reverence for India’s rich Heritage, Art and Culture, I embrace Bharatanatyam as my artistic medium. Upholding the sanctity of the dance, I aim to address and question current affairs, social injustice, ethics, choices, principles and philosophies. Inspired by Rukmini Devi Arundale, a fighter for the revival of Indian Art and Culture, I envision my purpose as igniting thought, voice and sparking meaningful action through the universal language of dance.`;
+
+    const container = document.getElementById("animatedText");
+    const words = text.split(" ");
+    words.forEach((word, i) => {
+      const span = document.createElement("span");
+      span.textContent = word;
+      span.style.marginRight = "0.7em";
+      span.style.setProperty("--delay", `${i * 0.10}s`);
+      container.appendChild(span);
+    });
+  </script><script> // 🎀 Bottom buttons
+  const buttonContainer = document.createElement('div');
+  buttonContainer.style.position = 'fixed';
+  buttonContainer.style.bottom = '20px';
+  buttonContainer.style.left = '50%';
+  buttonContainer.style.transform = 'translateX(-50%)';
+  buttonContainer.style.display = 'flex';
+  buttonContainer.style.gap = '10px';
+
+    // 🏠 Add "Home" button
+const homeButton = document.createElement('button');
+homeButton.textContent = 'Home';
+homeButton.style.backgroundColor = 'white';
+homeButton.style.color = '#333';
+homeButton.style.border = '1px solid #ccc';
+homeButton.style.padding = '10px 20px';
+homeButton.style.borderRadius = '5px';
+homeButton.style.cursor = 'pointer';
+homeButton.onclick = () => {
+  window.location.href = 'index.html'; // Redirect to home page
+};
+  buttonContainer.appendChild(homeButton);
+  document.body.appendChild(buttonContainer);
+  
+
+
+
+</script>
+</body>
+</html>

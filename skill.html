@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Vaishnavi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #000000;
+  color: #fff;
+}
+
+.skills-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.skills-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 2s ease;
+}
+
+.skills-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+  color: #f0d8b8;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background: rgba(74, 130, 154, 0.258);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bar {
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.fill {
+  background: #9be77d;
+  height: 100%;
+  width: 0;
+  animation: growBar 2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.fill {
+  width: var(--width);
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: #f5e1c0;
+  font-style: italic;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.cta-button {
+  background: #da1442;
+  color: #e7f7ee;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #8c6239;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}</style>
+<body>
+  <section class="skills-section">
+    <h1 class="skills-title">Embodied Mastery</h1>
+    <p class="skills-subtitle">A journey through rhythm, resonance, and refinement</p>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h2>Performance</h2>
+        <div class="bar"><div class="fill" style="--width:70%"></div></div>
+        <p>embodying the rhythm, expressing emotion, and dancing to the tunes.</p>
+      </div>
+      <div class="skill-card">
+        <h2>Teaching</h2>
+        <div class="bar"><div class="fill" style="--width:95%"></div></div>
+        <p>I guide with empathy, precision, and passion.</p>
+      </div>
+      <div class="skill-card">
+        <h2>Theory & History</h2>
+        <div class="bar"><div class="fill" style="--width:65%"></div></div>
+        <p>I trace lineage with reverence and curiosity.</p>
+      </div>
+      <div class="skill-card">
+        <h2>Choreography</h2>
+        <div class="bar"><div class="fill" style="--width:80%"></div></div>
+        <p>I weave movement into narrative.</p>
+      </div>
+      <div class="skill-card">
+        <h2>Talam</h2>
+        <div class="bar"><div class="fill" style="--width:75%"></div></div>
+        <p>dance cannot be without rythm.</p>
+      </div>
+
+      <div class="skill-card">
+        <h2>Writing</h2>
+        <div class="bar"><div class="fill" style="--width:90%"></div></div>
+        <p>Language is choreography—each word placed with intention.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h2>Let’s create something timeless!!!</h2><br>
+      <a href="#contact" class="cta-button">Collaborate with Me</a>
+    </div>
+  </section> <script> // 🎀 Bottom buttons
+  const buttonContainer = document.createElement('div');
+  buttonContainer.style.position = 'fixed';
+  buttonContainer.style.bottom = '20px';
+  buttonContainer.style.left = '50%';
+  buttonContainer.style.transform = 'translateX(-50%)';
+  buttonContainer.style.display = 'flex';
+  buttonContainer.style.gap = '10px';
+
+    // 🏠 Add "Home" button
+const homeButton = document.createElement('button');
+homeButton.textContent = 'Home';
+homeButton.style.backgroundColor = 'white';
+homeButton.style.color = '#333';
+homeButton.style.border = '1px solid #ccc';
+homeButton.style.padding = '10px 20px';
+homeButton.style.borderRadius = '5px';
+homeButton.style.cursor = 'pointer';
+homeButton.onclick = () => {
+  window.location.href = 'index.html'; // Redirect to home page
+};
+  buttonContainer.appendChild(homeButton);
+  document.body.appendChild(buttonContainer);
+  
+
+
+
+</script>
+</body>
+</html>

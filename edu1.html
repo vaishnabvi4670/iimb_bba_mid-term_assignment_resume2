@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experiences</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      font-family: 'Playfair Display', serif;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 3.5em;
+      margin-top: 40px;
+      letter-spacing: 2px;
+      color: #ffe8b0;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .timeline {
+      position: relative;
+      width: 90%;
+      margin: 80px auto;
+    }
+
+    .stem {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: transparent;
+      transform: translateX(-50%);
+    }
+
+    .leaf {
+      background-color: rgba(150, 241, 241, 0.326);
+      padding: 30px;
+      margin: 60px 0 40px;
+      border-radius: 40px;
+      width: 60%;
+      box-shadow: 0 0 10px rgba(255, 204, 102, 0.2);
+      animation: slideIn 1.5s ease-out forwards;
+      opacity: 0;
+      position: relative;
+      text-align: center;
+      font-size: 2em;
+      color: #ffcc66;
+    }
+
+    .leaf-left {
+      margin-right: auto;
+      border-right: 4px solid #ffcc66;
+      border-top-left-radius: 80px;
+      
+      
+    }
+
+    .leaf-right {
+      margin-left: auto;
+      border-left: 4px solid #ffcc66;
+      border-top-right-radius: 80px;
+    
+    }
+
+    .list {
+      width: 50%;
+      margin-bottom: 80px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .list-left {
+      margin-left: 5%;
+      text-align: left;
+    }
+
+    .list-right {
+
+  margin-left: auto;
+  margin-right: 5%;
+  width: 40%;
+  text-align: right;
+}
+
+    .list-right li {
+  font-size: 1.1em;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 20px;
+  animation-delay: 4s;
+}
+
+.list-right li::after {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: #ffe8b0;
+}
+
+    .list-left ul,
+    .list-right ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .list-left li {
+      font-size: 1.1em;
+      color: #e0e0e0;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+      animation-delay: 4s;
+    }
+
+    .list-left li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #ffe8b0;
+    }
+
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">EXPERIENCES</div>
+  <div class="timeline">
+    <div class="stem"></div>
+
+    <!-- Performance Leaf -->
+    <div class="leaf leaf-left">Performance</div>
+    <div class="list list-left">
+      <ul>
+        <li>Shilparamam – University of Hyderabad, Dept. of Dance (2024)</li>
+        <li>Savitribai Phule Auditorium – Orientation Program (2024)</li>
+        <li>Rangbhoomi Spaces – Team Bhumi’s “Shakti” (2023)</li>
+        <li>Guruvayoor Temple – Temple Performance (2023)</li>
+      </ul>
+    </div>
+
+    <!-- Movement Leaf -->
+    <div class="leaf leaf-right">Movement</div>
+    <div class="list list-right">
+      <ul><align="right"><margin-right: 20px>
+        <li>Kalarippayattu, Kathakali, Yoga, Karate, Mayurbhanj Chau</li>
+        <li>Folk Dance and Fitness Training</li>
+        <li>8 years of study in Indian Fine Arts, Culture, and History</li>
+      </ul>
+    </div>
+
+    <!-- Writing Leaf -->
+    <div class="leaf leaf-left">Writing</div>
+    <div class="list list-left">
+      <ul>
+        <li>“Cultural Economics of Bharatanatyam” – Gaandharvam3 (Navya Nataka Samiti)</li>
+        <li>Master’s Final Project – Sponsorship for Bharatanatyam Performers</li>
+        <li>Diploma Final Project – Indian vs Japanese court/temple dancers</li>
+        <li>Group Fieldwork – Temples in Tamil Nadu: Agatheeshwarar & Karikrishna Perumal</li>
+      </ul>
+    </div>
+
+  </div><script> // 🎀 Bottom buttons
+  const buttonContainer = document.createElement('div');
+  buttonContainer.style.position = 'fixed';
+  buttonContainer.style.bottom = '20px';
+  buttonContainer.style.left = '50%';
+  buttonContainer.style.transform = 'translateX(-50%)';
+  buttonContainer.style.display = 'flex';
+  buttonContainer.style.gap = '10px';
+
+    // 🏠 Add "Home" button
+const homeButton = document.createElement('button');
+homeButton.textContent = 'Home';
+homeButton.style.backgroundColor = 'white';
+homeButton.style.color = '#333';
+homeButton.style.border = '1px solid #ccc';
+homeButton.style.padding = '10px 20px';
+homeButton.style.borderRadius = '5px';
+homeButton.style.cursor = 'pointer';
+homeButton.onclick = () => {
+  window.location.href = 'index.html'; // Redirect to home page
+};
+  buttonContainer.appendChild(homeButton);
+  document.body.appendChild(buttonContainer);
+  
+
+
+
+</script>
+</body>
+</html>
